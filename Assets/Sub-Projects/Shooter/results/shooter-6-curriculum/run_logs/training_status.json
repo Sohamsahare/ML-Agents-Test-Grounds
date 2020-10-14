@@ -1,0 +1,38 @@
+{
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "StaticShooter": {
+        "checkpoints": [
+            {
+                "steps": 19998,
+                "file_path": "results\\shooter-6-curriculum\\StaticShooter\\StaticShooter-19998.nn",
+                "reward": -2.89070001244545,
+                "creation_time": 1602319023.2418277
+            },
+            {
+                "steps": 39952,
+                "file_path": "results\\shooter-6-curriculum\\StaticShooter\\StaticShooter-39952.nn",
+                "reward": -3.3536998718976974,
+                "creation_time": 1602319178.6889431
+            },
+            {
+                "steps": 52568,
+                "file_path": "results\\shooter-6-curriculum\\StaticShooter\\StaticShooter-52568.nn",
+                "reward": null,
+                "creation_time": 1602319266.510457
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 52568,
+            "file_path": "results\\shooter-6-curriculum\\StaticShooter.nn",
+            "reward": null,
+            "creation_time": 1602319266.510457
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

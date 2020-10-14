@@ -1,0 +1,47 @@
+{
+    "speed": {
+        "lesson_num": 0
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "DynamicShooter": {
+        "checkpoints": [
+            {
+                "steps": 99953,
+                "file_path": "results\\dynamic-shooter-curiosity-1\\DynamicShooter\\DynamicShooter-99953.nn",
+                "reward": -3.48787534609437,
+                "creation_time": 1602362216.807324
+            },
+            {
+                "steps": 199955,
+                "file_path": "results\\dynamic-shooter-curiosity-1\\DynamicShooter\\DynamicShooter-199955.nn",
+                "reward": -3.23060035854578,
+                "creation_time": 1602362589.8278325
+            },
+            {
+                "steps": 299997,
+                "file_path": "results\\dynamic-shooter-curiosity-1\\DynamicShooter\\DynamicShooter-299997.nn",
+                "reward": null,
+                "creation_time": 1602362966.7016838
+            },
+            {
+                "steps": 357350,
+                "file_path": "results\\dynamic-shooter-curiosity-1\\DynamicShooter\\DynamicShooter-357000.nn",
+                "reward": -2.983000235632062,
+                "creation_time": 1602363177.3085227
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 357350,
+            "file_path": "results\\dynamic-shooter-curiosity-1\\DynamicShooter.nn",
+            "reward": -2.983000235632062,
+            "creation_time": 1602363177.3085227
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

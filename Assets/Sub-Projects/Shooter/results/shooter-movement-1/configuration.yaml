@@ -1,0 +1,159 @@
+default_settings: null
+behaviors:
+  DynamicShooter:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 256
+      buffer_size: 4096
+      learning_rate: 0.003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 256
+      num_layers: 3
+      vis_encode_type: simple
+      memory:
+        sequence_length: 64
+        memory_size: 256
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    init_path: null
+    keep_checkpoints: 10
+    checkpoint_interval: 100000
+    max_steps: 1000000
+    time_horizon: 64
+    summary_freq: 5000
+    threaded: true
+    self_play: null
+    behavioral_cloning: null
+    framework: tensorflow
+env_settings:
+  env_path: ../../../Shoot-dem-agents
+  env_args: null
+  base_port: 5005
+  num_envs: 1
+  seed: -1
+engine_settings:
+  width: 512
+  height: 512
+  quality_level: 5
+  time_scale: 20
+  target_frame_rate: -1
+  capture_frame_rate: 60
+  no_graphics: false
+environment_parameters:
+  speed:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8289
+          value: 1
+      name: Easy
+      completion_criteria:
+        behavior: StaticShooter
+        measure: reward
+        min_lesson_length: 100
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: false
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 8290
+          min_value: 1.1
+          max_value: 2.5
+      name: Medium
+      completion_criteria:
+        behavior: StaticShooter
+        measure: reward
+        min_lesson_length: 200
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: true
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 8291
+          min_value: 2.6
+          max_value: 4.0
+      name: Hard
+      completion_criteria:
+        behavior: StaticShooter
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: true
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8292
+          value: 6
+      name: Insane
+      completion_criteria: null
+  acceleration:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8293
+          value: 1
+      name: Easy
+      completion_criteria:
+        behavior: StaticShooter
+        measure: reward
+        min_lesson_length: 100
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: false
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 8294
+          min_value: 1.5
+          max_value: 3.0
+      name: Medium
+      completion_criteria:
+        behavior: StaticShooter
+        measure: reward
+        min_lesson_length: 200
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: true
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 8295
+          min_value: 4.5
+          max_value: 6.0
+      name: Hard
+      completion_criteria:
+        behavior: StaticShooter
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: true
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8296
+          value: 8
+      name: Insane
+      completion_criteria: null
+checkpoint_settings:
+  run_id: shooter-movement-1
+  initialize_from: null
+  load_model: false
+  resume: false
+  force: true
+  train_model: false
+  inference: false
+debug: false

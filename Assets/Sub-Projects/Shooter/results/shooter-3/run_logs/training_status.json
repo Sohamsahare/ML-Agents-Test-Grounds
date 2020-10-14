@@ -1,0 +1,47 @@
+{
+    "StaticShooter": {
+        "checkpoints": [
+            {
+                "steps": 3965,
+                "file_path": "results\\shooter-3\\StaticShooter\\StaticShooter-3965.nn",
+                "reward": 0.6350000388920307,
+                "creation_time": 1602279999.0047922
+            },
+            {
+                "steps": 5949,
+                "file_path": "results\\shooter-3\\StaticShooter\\StaticShooter-5949.nn",
+                "reward": 1.3420002423226833,
+                "creation_time": 1602280024.2443311
+            },
+            {
+                "steps": 7988,
+                "file_path": "results\\shooter-3\\StaticShooter\\StaticShooter-7988.nn",
+                "reward": 0.8390000982520481,
+                "creation_time": 1602280047.2234757
+            },
+            {
+                "steps": 9942,
+                "file_path": "results\\shooter-3\\StaticShooter\\StaticShooter-9942.nn",
+                "reward": 1.1365003259852529,
+                "creation_time": 1602280079.8568745
+            },
+            {
+                "steps": 10718,
+                "file_path": "results\\shooter-3\\StaticShooter\\StaticShooter-10718.nn",
+                "reward": 2.3231336218615373,
+                "creation_time": 1602280082.1471415
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10718,
+            "file_path": "results\\shooter-3\\StaticShooter.nn",
+            "reward": 2.3231336218615373,
+            "creation_time": 1602280082.1471415
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

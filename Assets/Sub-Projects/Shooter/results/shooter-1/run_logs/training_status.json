@@ -1,0 +1,23 @@
+{
+    "StaticShooter": {
+        "checkpoints": [
+            {
+                "steps": 29988,
+                "file_path": "results\\shooter-1\\StaticShooter\\StaticShooter-29988.nn",
+                "reward": 0.47982943100882147,
+                "creation_time": 1602279427.0919478
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 29988,
+            "file_path": "results\\shooter-1\\StaticShooter.nn",
+            "reward": 0.47982943100882147,
+            "creation_time": 1602279427.0919478
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

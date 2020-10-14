@@ -1,0 +1,47 @@
+{
+    "enemies": {
+        "lesson_num": 0
+    },
+    "spawnRange": {
+        "lesson_num": 0
+    },
+    "DynamicShooter": {
+        "checkpoints": [
+            {
+                "steps": 99947,
+                "file_path": "results\\shooter-basic-1\\DynamicShooter\\DynamicShooter-99947.nn",
+                "reward": -0.6867500487715006,
+                "creation_time": 1602414389.2539828
+            },
+            {
+                "steps": 199995,
+                "file_path": "results\\shooter-basic-1\\DynamicShooter\\DynamicShooter-199995.nn",
+                "reward": -1.0000000484287739,
+                "creation_time": 1602414924.8850405
+            },
+            {
+                "steps": 299961,
+                "file_path": "results\\shooter-basic-1\\DynamicShooter\\DynamicShooter-299961.nn",
+                "reward": -1.0000000484287739,
+                "creation_time": 1602415430.5624952
+            },
+            {
+                "steps": 301793,
+                "file_path": "results\\shooter-basic-1\\DynamicShooter\\DynamicShooter-301433.nn",
+                "reward": -1.0000000484287739,
+                "creation_time": 1602415441.2926824
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 301793,
+            "file_path": "results\\shooter-basic-1\\DynamicShooter.nn",
+            "reward": -1.0000000484287739,
+            "creation_time": 1602415441.2926824
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

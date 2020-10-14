@@ -1,0 +1,53 @@
+{
+    "speed": {
+        "lesson_num": 0
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "DynamicShooter": {
+        "checkpoints": [
+            {
+                "steps": 99942,
+                "file_path": "results\\duel-curiosity-1\\DynamicShooter\\DynamicShooter-99942.nn",
+                "reward": -3.0799999833106995,
+                "creation_time": 1602409643.1180913
+            },
+            {
+                "steps": 199999,
+                "file_path": "results\\duel-curiosity-1\\DynamicShooter\\DynamicShooter-199999.nn",
+                "reward": -0.3010000418871641,
+                "creation_time": 1602410201.9750628
+            },
+            {
+                "steps": 299951,
+                "file_path": "results\\duel-curiosity-1\\DynamicShooter\\DynamicShooter-299951.nn",
+                "reward": -0.8030000347644091,
+                "creation_time": 1602410821.632244
+            },
+            {
+                "steps": 399994,
+                "file_path": "results\\duel-curiosity-1\\DynamicShooter\\DynamicShooter-399994.nn",
+                "reward": -1.350500037893653,
+                "creation_time": 1602411493.3590117
+            },
+            {
+                "steps": 427170,
+                "file_path": "results\\duel-curiosity-1\\DynamicShooter\\DynamicShooter-426658.nn",
+                "reward": -2.0630000680685043,
+                "creation_time": 1602411671.238344
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 427170,
+            "file_path": "results\\duel-curiosity-1\\DynamicShooter.nn",
+            "reward": -2.0630000680685043,
+            "creation_time": 1602411671.238344
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

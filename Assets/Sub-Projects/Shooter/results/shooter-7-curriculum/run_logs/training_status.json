@@ -1,0 +1,86 @@
+{
+    "acceleration": {
+        "lesson_num": 3
+    },
+    "StaticShooter": {
+        "checkpoints": [
+            {
+                "steps": 49996,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-49996.nn",
+                "reward": -7.004999995231628,
+                "creation_time": 1602320697.9312189
+            },
+            {
+                "steps": 99952,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-99952.nn",
+                "reward": 2.625260933585789,
+                "creation_time": 1602320926.281584
+            },
+            {
+                "steps": 149948,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-149948.nn",
+                "reward": 2.8691539492171545,
+                "creation_time": 1602321155.1223245
+            },
+            {
+                "steps": 199990,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-199990.nn",
+                "reward": 2.4980000592768192,
+                "creation_time": 1602321380.009367
+            },
+            {
+                "steps": 249964,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-249964.nn",
+                "reward": 2.5487500369548797,
+                "creation_time": 1602321601.6046333
+            },
+            {
+                "steps": 299999,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-299999.nn",
+                "reward": 3.127678687551192,
+                "creation_time": 1602321827.8759227
+            },
+            {
+                "steps": 349997,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-349997.nn",
+                "reward": 2.7872000420466065,
+                "creation_time": 1602322055.042005
+            },
+            {
+                "steps": 399963,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-399963.nn",
+                "reward": 3.407000025113424,
+                "creation_time": 1602322283.954564
+            },
+            {
+                "steps": 449959,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-449959.nn",
+                "reward": 2.858375009459754,
+                "creation_time": 1602322508.1632054
+            },
+            {
+                "steps": 499990,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-499990.nn",
+                "reward": 2.3833751045167446,
+                "creation_time": 1602322743.0569856
+            },
+            {
+                "steps": 500768,
+                "file_path": "results\\shooter-7-curriculum\\StaticShooter\\StaticShooter-500768.nn",
+                "reward": 2.5262400591373444,
+                "creation_time": 1602322746.9850733
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500768,
+            "file_path": "results\\shooter-7-curriculum\\StaticShooter.nn",
+            "reward": 2.5262400591373444,
+            "creation_time": 1602322746.9850733
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

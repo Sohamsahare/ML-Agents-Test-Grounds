@@ -1,0 +1,65 @@
+{
+    "speed": {
+        "lesson_num": 3
+    },
+    "acceleration": {
+        "lesson_num": 3
+    },
+    "enemies": {
+        "lesson_num": 3
+    },
+    "spawnRange": {
+        "lesson_num": 3
+    },
+    "DynamicShooter": {
+        "checkpoints": [
+            {
+                "steps": 99971,
+                "file_path": "results\\shooter-basic-move-enemy-600k-1\\DynamicShooter\\DynamicShooter-99971.nn",
+                "reward": -1.3130000680685043,
+                "creation_time": 1602436676.8699086
+            },
+            {
+                "steps": 199987,
+                "file_path": "results\\shooter-basic-move-enemy-600k-1\\DynamicShooter\\DynamicShooter-199987.nn",
+                "reward": null,
+                "creation_time": 1602437158.3224025
+            },
+            {
+                "steps": 299980,
+                "file_path": "results\\shooter-basic-move-enemy-600k-1\\DynamicShooter\\DynamicShooter-299980.nn",
+                "reward": 1.3709998242557049,
+                "creation_time": 1602437664.3433135
+            },
+            {
+                "steps": 399964,
+                "file_path": "results\\shooter-basic-move-enemy-600k-1\\DynamicShooter\\DynamicShooter-399964.nn",
+                "reward": 2.628800058364868,
+                "creation_time": 1602438160.8852518
+            },
+            {
+                "steps": 499947,
+                "file_path": "results\\shooter-basic-move-enemy-600k-1\\DynamicShooter\\DynamicShooter-499947.nn",
+                "reward": -2.1512503027915955,
+                "creation_time": 1602438632.683409
+            },
+            {
+                "steps": 595506,
+                "file_path": "results\\shooter-basic-move-enemy-600k-1\\DynamicShooter\\DynamicShooter-595506.nn",
+                "reward": null,
+                "creation_time": 1602439144.217345
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 595506,
+            "file_path": "results\\shooter-basic-move-enemy-600k-1\\DynamicShooter.nn",
+            "reward": null,
+            "creation_time": 1602439144.217345
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

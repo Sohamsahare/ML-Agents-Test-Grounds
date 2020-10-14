@@ -1,0 +1,7 @@
+model_checkpoint_path: "DynamicShooter-595506.ckpt"
+all_model_checkpoint_paths: "DynamicShooter-99971.ckpt"
+all_model_checkpoint_paths: "DynamicShooter-199987.ckpt"
+all_model_checkpoint_paths: "DynamicShooter-299980.ckpt"
+all_model_checkpoint_paths: "DynamicShooter-399964.ckpt"
+all_model_checkpoint_paths: "DynamicShooter-499947.ckpt"
+all_model_checkpoint_paths: "DynamicShooter-595506.ckpt"

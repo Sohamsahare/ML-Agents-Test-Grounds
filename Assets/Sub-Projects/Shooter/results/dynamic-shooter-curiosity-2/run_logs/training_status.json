@@ -1,0 +1,83 @@
+{
+    "speed": {
+        "lesson_num": 0
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "DynamicShooter": {
+        "checkpoints": [
+            {
+                "steps": 99992,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-99992.nn",
+                "reward": null,
+                "creation_time": 1602400829.0657172
+            },
+            {
+                "steps": 199990,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-199990.nn",
+                "reward": -2.229500349611044,
+                "creation_time": 1602401359.3779595
+            },
+            {
+                "steps": 299996,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-299996.nn",
+                "reward": null,
+                "creation_time": 1602401948.4111078
+            },
+            {
+                "steps": 399982,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-399982.nn",
+                "reward": null,
+                "creation_time": 1602402415.672045
+            },
+            {
+                "steps": 499992,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-499992.nn",
+                "reward": -1.7530002063140273,
+                "creation_time": 1602402819.2030902
+            },
+            {
+                "steps": 599978,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-599978.nn",
+                "reward": 3.6150001138448715,
+                "creation_time": 1602403221.3818424
+            },
+            {
+                "steps": 699949,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-699949.nn",
+                "reward": -0.9960000962018967,
+                "creation_time": 1602403627.45112
+            },
+            {
+                "steps": 799969,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-799969.nn",
+                "reward": -3.8730005150039992,
+                "creation_time": 1602404031.669099
+            },
+            {
+                "steps": 899951,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-899951.nn",
+                "reward": null,
+                "creation_time": 1602404439.476246
+            },
+            {
+                "steps": 948161,
+                "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter\\DynamicShooter-947713.nn",
+                "reward": 0.4674999713897705,
+                "creation_time": 1602404629.2591867
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 948161,
+            "file_path": "results\\dynamic-shooter-curiosity-2\\DynamicShooter.nn",
+            "reward": 0.4674999713897705,
+            "creation_time": 1602404629.2591867
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

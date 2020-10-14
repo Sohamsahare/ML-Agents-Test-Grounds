@@ -1,0 +1,47 @@
+{
+    "speed": {
+        "lesson_num": 0
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "DynamicShooter": {
+        "checkpoints": [
+            {
+                "steps": 99969,
+                "file_path": "results\\dynamic-shooter-curiosity-3-single-enemy\\DynamicShooter\\DynamicShooter-99969.nn",
+                "reward": -1.1826998725533486,
+                "creation_time": 1602405859.0960925
+            },
+            {
+                "steps": 199944,
+                "file_path": "results\\dynamic-shooter-curiosity-3-single-enemy\\DynamicShooter\\DynamicShooter-199944.nn",
+                "reward": -1.6117999114096164,
+                "creation_time": 1602406241.0909023
+            },
+            {
+                "steps": 299947,
+                "file_path": "results\\dynamic-shooter-curiosity-3-single-enemy\\DynamicShooter\\DynamicShooter-299947.nn",
+                "reward": -0.5570001415908337,
+                "creation_time": 1602406619.5564883
+            },
+            {
+                "steps": 327676,
+                "file_path": "results\\dynamic-shooter-curiosity-3-single-enemy\\DynamicShooter\\DynamicShooter-327676.nn",
+                "reward": -5.549999959766865,
+                "creation_time": 1602406733.3133132
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 327676,
+            "file_path": "results\\dynamic-shooter-curiosity-3-single-enemy\\DynamicShooter.nn",
+            "reward": -5.549999959766865,
+            "creation_time": 1602406733.3133132
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

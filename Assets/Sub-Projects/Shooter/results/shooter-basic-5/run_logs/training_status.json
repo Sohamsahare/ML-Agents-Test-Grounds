@@ -1,0 +1,77 @@
+{
+    "enemies": {
+        "lesson_num": 3
+    },
+    "spawnRange": {
+        "lesson_num": 3
+    },
+    "DynamicShooter": {
+        "checkpoints": [
+            {
+                "steps": 99953,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-99953.nn",
+                "reward": null,
+                "creation_time": 1602426941.939576
+            },
+            {
+                "steps": 199964,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-199964.nn",
+                "reward": null,
+                "creation_time": 1602427519.081524
+            },
+            {
+                "steps": 299997,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-299997.nn",
+                "reward": 0.9589999914169312,
+                "creation_time": 1602428103.7627738
+            },
+            {
+                "steps": 399994,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-399994.nn",
+                "reward": 2.156000079587102,
+                "creation_time": 1602428638.6116865
+            },
+            {
+                "steps": 499969,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-499969.nn",
+                "reward": 4.616500150412321,
+                "creation_time": 1602429163.1657043
+            },
+            {
+                "steps": 599996,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-599996.nn",
+                "reward": -0.03499992750585079,
+                "creation_time": 1602429684.2649755
+            },
+            {
+                "steps": 699975,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-699975.nn",
+                "reward": 4.745000004768372,
+                "creation_time": 1602430202.1370144
+            },
+            {
+                "steps": 799959,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-799959.nn",
+                "reward": 1.929666705429554,
+                "creation_time": 1602430716.8225064
+            },
+            {
+                "steps": 862621,
+                "file_path": "results\\shooter-basic-5\\DynamicShooter\\DynamicShooter-862261.nn",
+                "reward": 2.8273333286245665,
+                "creation_time": 1602431047.261102
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 862621,
+            "file_path": "results\\shooter-basic-5\\DynamicShooter.nn",
+            "reward": 2.8273333286245665,
+            "creation_time": 1602431047.261102
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

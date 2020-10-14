@@ -1,0 +1,6 @@
+model_checkpoint_path: "StaticShooter-10718.ckpt"
+all_model_checkpoint_paths: "StaticShooter-3965.ckpt"
+all_model_checkpoint_paths: "StaticShooter-5949.ckpt"
+all_model_checkpoint_paths: "StaticShooter-7988.ckpt"
+all_model_checkpoint_paths: "StaticShooter-9942.ckpt"
+all_model_checkpoint_paths: "StaticShooter-10718.ckpt"
