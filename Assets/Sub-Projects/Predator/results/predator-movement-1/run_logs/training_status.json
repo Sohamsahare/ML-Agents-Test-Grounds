@@ -1,0 +1,89 @@
+{
+    "speed": {
+        "lesson_num": 3
+    },
+    "acceleration": {
+        "lesson_num": 2
+    },
+    "enemies": {
+        "lesson_num": 0
+    },
+    "spawnRange": {
+        "lesson_num": 0
+    },
+    "Predator": {
+        "checkpoints": [
+            {
+                "steps": 199945,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-199945.nn",
+                "reward": null,
+                "creation_time": 1602749715.447099
+            },
+            {
+                "steps": 299983,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-299983.nn",
+                "reward": null,
+                "creation_time": 1602750148.1725824
+            },
+            {
+                "steps": 399991,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-399991.nn",
+                "reward": null,
+                "creation_time": 1602750584.53194
+            },
+            {
+                "steps": 499948,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-499948.nn",
+                "reward": 4.4840002954006195,
+                "creation_time": 1602751015.5550084
+            },
+            {
+                "steps": 599970,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-599970.nn",
+                "reward": null,
+                "creation_time": 1602751473.3374007
+            },
+            {
+                "steps": 699964,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-699964.nn",
+                "reward": 4.319000288844109,
+                "creation_time": 1602751991.2831502
+            },
+            {
+                "steps": 799962,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-799962.nn",
+                "reward": 4.704000368714333,
+                "creation_time": 1602752444.7424734
+            },
+            {
+                "steps": 899972,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-899972.nn",
+                "reward": 4.477000206708908,
+                "creation_time": 1602752881.1431272
+            },
+            {
+                "steps": 999975,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-999975.nn",
+                "reward": 4.383666917681694,
+                "creation_time": 1602753361.5964062
+            },
+            {
+                "steps": 1000551,
+                "file_path": "results\\predator-movement-1\\Predator\\Predator-1000551.nn",
+                "reward": 4.383666917681694,
+                "creation_time": 1602753363.6378472
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000551,
+            "file_path": "results\\predator-movement-1\\Predator.nn",
+            "reward": 4.383666917681694,
+            "creation_time": 1602753363.6378472
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

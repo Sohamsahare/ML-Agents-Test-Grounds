@@ -47,7 +47,7 @@ public class ShooterAgent : Agent
             gun = GetComponentInChildren<Gun>();
         }
         enemies = new List<GameObject>();
-        spawnRange = 4f;
+        spawnRange = defaultSpawnRange;
     }
     public override void OnEpisodeBegin()
     {

@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sub-Projects/Shooter/Scenes/StaticShooter.unity
     guid: e1b0c1be661fafb448a79287d0df0756
+  - enabled: 1
+    path: Assets/Sub-Projects/Predator/Scenes/Chaser.unity
+    guid: 295402484a108de43a0d8a39b3dbcd47
   m_configObjects: {}
