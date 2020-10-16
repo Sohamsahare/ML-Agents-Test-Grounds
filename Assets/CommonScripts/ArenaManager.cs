@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.MLAgents;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ArenaManager : MonoBehaviour
 {
@@ -17,8 +18,11 @@ public class ArenaManager : MonoBehaviour
     public Material passMaterial;
     public Material failMaterial;
     public Wall[] walls;
+    public Transform[] obstacles;
+    public float minObstacleSpawnRange = 3f;
+    public float maxObstacleSpawnRange = 10f;
     public float spawnRange { get; private set; }
-    float enemyCount;
+    public float enemyCount { get; private set; }
     float averageScore;
     float currentScore;
     List<GameObject> enemies;
@@ -41,7 +45,6 @@ public class ArenaManager : MonoBehaviour
         this.currentScore = currentScore;
         currentScoreTmp.text = "Score: " + currentScore;
     }
-
     public virtual void ReadParameters()
     {
         // get spawn range 
@@ -83,6 +86,25 @@ public class ArenaManager : MonoBehaviour
                 default: break;
             }
         }
+    }
+
+    public virtual void PlaceObstacles(bool enableObstacles)
+    {
+        foreach (Transform obs in obstacles)
+        {
+            if (enableObstacles)
+            {
+                // Vector2 pos = Random.insideUnitCircle * Random.Range(minObstacleSpawnRange, maxObstacleSpawnRange);
+                Vector2 pos = Random.insideUnitCircle * spawnRange;
+                obs.position = ground.transform.position + new Vector3(pos.x, 1f, pos.y);
+                obs.eulerAngles = new Vector3(0, Random.Range(0, 180f), 0);
+            }
+            else
+            {
+                obs.gameObject.SetActive(false);
+            }
+        }
+        ground.GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
     public virtual void SpawnEnemies()

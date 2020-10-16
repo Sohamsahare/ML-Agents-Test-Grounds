@@ -7,9 +7,11 @@ public class CustomAgent : Agent
     public float movementSpeed = 1f;
     public float maxPositiveReward = 1;
     public float maxNegativeReward = -1;
+    public bool enableObstacles = false;
     public float currentScore { get; private set; }
     public ArenaManager arenaManager;
     protected Rigidbody rb;
+    protected StatsRecorder stats;
 
     public override void Initialize()
     {
@@ -17,6 +19,7 @@ public class CustomAgent : Agent
 
         rb = GetComponent<Rigidbody>();
         arenaManager.Initialise();
+        stats = Academy.Instance.StatsRecorder;
 
         PostInitialize();
     }
@@ -33,6 +36,8 @@ public class CustomAgent : Agent
         // everything that needs to be done before spawning
         // such as setting up the arena
         PreSpawnLogic();
+        // place obstacles if enabled
+        PlaceObstacles();
         // spawn any remaining enemies
         SpawnEnemies();
         // Set random agent position
@@ -42,6 +47,11 @@ public class CustomAgent : Agent
         ResetEnemies();
 
         PostEpisodeBegin();
+    }
+
+    protected virtual void PlaceObstacles()
+    {
+        arenaManager.PlaceObstacles(enableObstacles);
     }
 
     protected virtual void PreEpisodeBegin() { }
@@ -67,30 +77,42 @@ public class CustomAgent : Agent
 
     public void RewardAgent(GameObject enemy)
     {
+        PreAgentRewarded();
         // positive reward for achieving goal
         AddReward(maxPositiveReward);
         currentScore = Utilities.RoundTo(GetCumulativeReward(), 2);
         arenaManager.SetScore(currentScore);
-
+        PostAgentRewarded();
         if (arenaManager.IsEpisodeEnded(enemy, true))
         {
+            PreEpisodeEnded();
             EndEpisode();
         }
     }
 
+    protected virtual void PreAgentRewarded() { }
+    protected virtual void PostAgentRewarded() { }
+
     public void PunishAgent(GameObject enemy)
     {
+        PreAgentPunished();
         // negative reward for being attacked
         AddReward(maxNegativeReward);
         currentScore = Utilities.RoundTo(GetCumulativeReward(), 2);
         arenaManager.SetScore(currentScore);
+        PostAgentPunished();
 
         if (arenaManager.IsEpisodeEnded(enemy, false))
         {
+            PreEpisodeEnded();
             EndEpisode();
         }
     }
+    protected virtual void PreAgentPunished() { }
+    protected virtual void PostAgentPunished() { }
 
+
+    protected virtual void PreEpisodeEnded() { }
     protected virtual void FixedUpdate()
     {
         currentScore = Utilities.RoundTo(GetCumulativeReward(), 2);

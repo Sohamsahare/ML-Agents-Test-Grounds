@@ -1,18 +1,19 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 
 public class PredatorAgent : CustomAgent
 {
-
-    public override void Initialize()
+    public TextMeshPro hpTmp;
+    public TextMeshPro enemiesKilledTmp;
+    float enemyCountShotAt;
+    // float enemyCountShotBy;
+    protected override void PreEpisodeBegin()
     {
-        base.Initialize();
-    }
-    public override void OnEpisodeBegin()
-    {
-        base.OnEpisodeBegin();
+        enemyCountShotAt = 0;
+        // enemyCountShotBy = 0;
     }
     protected override void PreSpawnLogic()
     {
@@ -120,6 +121,21 @@ public class PredatorAgent : CustomAgent
         }
     }
 
+    protected override void PostAgentRewarded()
+    {
+        Debug.Log("called");
+        enemyCountShotAt++;
+        stats.Add("Enemies hit", enemyCountShotAt);
+        enemiesKilledTmp.text = "Enemies killed: " + enemyCountShotAt;
+    }
+
+    // protected override void PostAgentPunished()
+    // {
+    //     enemyCountShotBy++;
+    //     float hp = arenaManager.enemyCount - enemyCountShotBy;
+    //     stats.Add("HP", hp);
+    //     hpTmp.text = "HP: " + hp;
+    // }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -135,7 +151,8 @@ public class PredatorAgent : CustomAgent
             AddReward(-0.01f);
         }
     }
-    private void OnCollisionExit(Collision other) {
+    private void OnCollisionExit(Collision other)
+    {
         if (other.gameObject.CompareTag("wall"))
         {
             AddReward(0.1f);

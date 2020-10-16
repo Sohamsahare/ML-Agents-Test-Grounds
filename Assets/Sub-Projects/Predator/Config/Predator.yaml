@@ -81,7 +81,7 @@ behaviors:
 environment_parameters:
   speed:
     curriculum:
-      - name: Easy # The '-' is important as this is a list
+      - name: Easy - 5 # The '-' is important as this is a list
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -89,7 +89,7 @@ environment_parameters:
           min_lesson_length: 100
           threshold: 3
         value: 5
-      - name: Medium # This is the start of the second lesson
+      - name: Medium [5,10] # This is the start of the second lesson
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -102,7 +102,7 @@ environment_parameters:
           sampler_parameters:
             min_value: 5
             max_value: 10
-      - name: Hard
+      - name: Hard [10,15]
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -115,11 +115,11 @@ environment_parameters:
           sampler_parameters:
             min_value: 10
             max_value: 15
-      - name: Insane
+      - name: Insane - 25
         value: 25
   acceleration:
     curriculum:
-      - name: Easy # The '-' is important as this is a list
+      - name: Easy - 8 # The '-' is important as this is a list
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -127,7 +127,7 @@ environment_parameters:
           min_lesson_length: 100
           threshold: 3
         value: 8
-      - name: Medium # This is the start of the second lesson
+      - name: Medium [8,14] # This is the start of the second lesson
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -140,7 +140,7 @@ environment_parameters:
           sampler_parameters:
             min_value: 8
             max_value: 14
-      - name: Hard
+      - name: Hard [14,20]
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -153,11 +153,11 @@ environment_parameters:
           sampler_parameters:
             min_value: 14
             max_value: 20
-      - name: Insane
+      - name: Insane - 25
         value: 25
   enemies:
     curriculum:
-      - name: Easy # The '-' is important as this is a list
+      - name: Easy - 5 # The '-' is important as this is a list
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -165,7 +165,7 @@ environment_parameters:
           min_lesson_length: 500
           threshold: 3.5
         value: 5
-      - name: Medium # This is the start of the second lesson
+      - name: Medium - 4 # This is the start of the second lesson
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -174,7 +174,7 @@ environment_parameters:
           threshold: 3
           require_reset: true
         value: 4
-      - name: Hard
+      - name: Hard - 3
         completion_criteria:
           measure: reward
           behavior: Predator
@@ -183,7 +183,7 @@ environment_parameters:
           threshold: 2
           require_reset: true
         value: 3
-      - name: Insane
+      - name: Insane - 1
         value: 1
   spawnRange:
     curriculum:
@@ -221,5 +221,5 @@ environment_parameters:
       #     sampler_parameters:
       #       max_value: 11
       #       min_value: 7
-      - name: Insane
+      - name: Insane - 13
         value: 13
