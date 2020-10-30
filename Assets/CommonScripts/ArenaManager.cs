@@ -21,13 +21,13 @@ public class ArenaManager : MonoBehaviour
     public Transform[] obstacles;
     public float minObstacleSpawnRange = 3f;
     public float maxObstacleSpawnRange = 10f;
-    public float spawnRange { get; private set; }
-    public float enemyCount { get; private set; }
-    float averageScore;
-    float currentScore;
-    List<GameObject> enemies;
-    Material originalMaterial;
-    Renderer groundRenderer;
+    public float spawnRange { get; protected set; }
+    public float enemyCount { get; protected set; }
+    protected float averageScore;
+    protected float currentScore;
+    protected List<GameObject> enemies;
+    protected Material originalMaterial;
+    protected Renderer groundRenderer;
 
     public void Initialise()
     {
@@ -44,6 +44,11 @@ public class ArenaManager : MonoBehaviour
     {
         this.currentScore = currentScore;
         currentScoreTmp.text = "Score: " + currentScore;
+    }
+    public virtual void SetScore(float currentScore, int id)
+    {
+        // do something with id
+        SetScore(currentScore);
     }
     public virtual void ReadParameters()
     {

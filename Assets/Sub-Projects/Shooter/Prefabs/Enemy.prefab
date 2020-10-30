@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 520329762}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: enemy
+  m_TagString: predator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultParameter: 5
   agent: {fileID: 0}
+  disableEnemy: 0
 --- !u!195 &520329762
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ NavMeshAgent:
   m_Radius: 0.5
   m_Speed: 3
   m_Acceleration: 0.9
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1

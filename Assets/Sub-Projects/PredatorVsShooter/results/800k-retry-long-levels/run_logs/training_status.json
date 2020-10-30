@@ -1,0 +1,159 @@
+{
+    "speed": {
+        "lesson_num": 3
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "enemies": {
+        "lesson_num": 0
+    },
+    "spawnRange": {
+        "lesson_num": 1
+    },
+    "Predator": {
+        "checkpoints": [
+            {
+                "steps": 199973,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-199973.nn",
+                "reward": -0.6663000598549843,
+                "creation_time": 1603549174.1880593
+            },
+            {
+                "steps": 299972,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-299972.nn",
+                "reward": -1.1995000652968884,
+                "creation_time": 1603550052.9034214
+            },
+            {
+                "steps": 399969,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-399969.nn",
+                "reward": -0.6122500635683537,
+                "creation_time": 1603550879.1008298
+            },
+            {
+                "steps": 499961,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-499961.nn",
+                "reward": -1.2170000486075878,
+                "creation_time": 1603551713.0232077
+            },
+            {
+                "steps": 599979,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-599979.nn",
+                "reward": 0.3789999894797802,
+                "creation_time": 1603552627.817107
+            },
+            {
+                "steps": 699943,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-699943.nn",
+                "reward": 0.2618888806965616,
+                "creation_time": 1603553700.262478
+            },
+            {
+                "steps": 799990,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-799990.nn",
+                "reward": 0.03144444856378767,
+                "creation_time": 1603554908.2482035
+            },
+            {
+                "steps": 899960,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-899960.nn",
+                "reward": 0.01123075932264328,
+                "creation_time": 1603556017.0112927
+            },
+            {
+                "steps": 999980,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-999980.nn",
+                "reward": 0.9060000255703926,
+                "creation_time": 1603557069.03363
+            },
+            {
+                "steps": 1000818,
+                "file_path": "results\\800k-retry-long-levels\\Predator\\Predator-1000818.nn",
+                "reward": -0.2548000432550907,
+                "creation_time": 1603557072.6780312
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000818,
+            "file_path": "results\\800k-retry-long-levels\\Predator.nn",
+            "reward": -0.2548000432550907,
+            "creation_time": 1603557072.6780312
+        }
+    },
+    "Shooter": {
+        "checkpoints": [
+            {
+                "steps": 199973,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-199973.nn",
+                "reward": 0.6127142746533666,
+                "creation_time": 1603549177.1220722
+            },
+            {
+                "steps": 299972,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-299972.nn",
+                "reward": 0.7500000149011612,
+                "creation_time": 1603550055.3126173
+            },
+            {
+                "steps": 399969,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-399969.nn",
+                "reward": 0.5872500023494164,
+                "creation_time": 1603550871.1646783
+            },
+            {
+                "steps": 499961,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-499961.nn",
+                "reward": 0.6229999884963036,
+                "creation_time": 1603551716.5525298
+            },
+            {
+                "steps": 599979,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-599979.nn",
+                "reward": null,
+                "creation_time": 1603552633.121064
+            },
+            {
+                "steps": 699943,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-699943.nn",
+                "reward": -0.6290909539569508,
+                "creation_time": 1603553703.7775204
+            },
+            {
+                "steps": 799990,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-799990.nn",
+                "reward": -0.37700003385543823,
+                "creation_time": 1603554900.7181585
+            },
+            {
+                "steps": 899960,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-899960.nn",
+                "reward": null,
+                "creation_time": 1603556024.2004263
+            },
+            {
+                "steps": 999980,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-999980.nn",
+                "reward": -0.5202143202934947,
+                "creation_time": 1603557063.2786345
+            },
+            {
+                "steps": 1001071,
+                "file_path": "results\\800k-retry-long-levels\\Shooter\\Shooter-1001071.nn",
+                "reward": -0.21648002713918685,
+                "creation_time": 1603557071.4735081
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1001071,
+            "file_path": "results\\800k-retry-long-levels\\Shooter.nn",
+            "reward": -0.21648002713918685,
+            "creation_time": 1603557071.4735081
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

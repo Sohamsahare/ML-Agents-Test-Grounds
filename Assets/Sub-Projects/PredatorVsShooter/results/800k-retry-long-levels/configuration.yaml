@@ -1,0 +1,290 @@
+default_settings: null
+behaviors:
+  Predator:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 128
+      buffer_size: 2048
+      learning_rate: 0.003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 64
+      num_layers: 2
+      vis_encode_type: simple
+      memory:
+        sequence_length: 64
+        memory_size: 256
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    init_path: null
+    keep_checkpoints: 10
+    checkpoint_interval: 100000
+    max_steps: 1000000
+    time_horizon: 64
+    summary_freq: 10000
+    threaded: true
+    self_play: null
+    behavioral_cloning: null
+    framework: tensorflow
+  Shooter:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 128
+      buffer_size: 2048
+      learning_rate: 0.003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 64
+      num_layers: 2
+      vis_encode_type: simple
+      memory:
+        sequence_length: 64
+        memory_size: 256
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    init_path: null
+    keep_checkpoints: 10
+    checkpoint_interval: 100000
+    max_steps: 1000000
+    time_horizon: 64
+    summary_freq: 10000
+    threaded: true
+    self_play: null
+    behavioral_cloning: null
+    framework: tensorflow
+env_settings:
+  env_path: ../../../Build/PredatorVsShooter
+  env_args: null
+  base_port: 5005
+  num_envs: 1
+  seed: -1
+engine_settings:
+  width: 84
+  height: 84
+  quality_level: 5
+  time_scale: 20
+  target_frame_rate: -1
+  capture_frame_rate: 60
+  no_graphics: false
+environment_parameters:
+  speed:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9667
+          value: 0.1
+      name: Easy - 0.1
+      completion_criteria:
+        behavior: Shooter
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 0.2
+        require_reset: false
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 9668
+          min_value: 0.2
+          max_value: 0.4
+      name: Medium [.2,.4]
+      completion_criteria:
+        behavior: Shooter
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 0.4
+        require_reset: true
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 9669
+          min_value: 0.5
+          max_value: 0.7
+      name: Hard [.5,.7]
+      completion_criteria:
+        behavior: Shooter
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 0.4
+        require_reset: true
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9670
+          value: 1
+      name: Insane - 1
+      completion_criteria: null
+  acceleration:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9671
+          value: 8
+      name: Easy - 8
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 100
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: false
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 9672
+          min_value: 8.0
+          max_value: 14.0
+      name: Medium [8,14]
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 2.0
+        require_reset: true
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 9673
+          min_value: 14.0
+          max_value: 20.0
+      name: Hard [14,20]
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 2.0
+        require_reset: true
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9674
+          value: 25
+      name: Insane - 25
+      completion_criteria: null
+  enemies:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9675
+          value: 5
+      name: Easy - 5
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 500
+        signal_smoothing: true
+        threshold: 3.5
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9676
+          value: 4
+      name: Medium - 4
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 200
+        signal_smoothing: true
+        threshold: 3.0
+        require_reset: true
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9677
+          value: 3
+      name: Hard - 3
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 200
+        signal_smoothing: true
+        threshold: 2.0
+        require_reset: true
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9678
+          value: 1
+      name: Insane - 1
+      completion_criteria: null
+  spawnRange:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9679
+          value: 5
+      name: Easy
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 0.2
+        require_reset: false
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 9680
+          min_value: 8.0
+          max_value: 10.0
+      name: Far
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 0.2
+        require_reset: true
+    - value:
+        sampler_type: uniform
+        sampler_parameters:
+          seed: 9681
+          min_value: 6.0
+          max_value: 8.0
+      name: Medium
+      completion_criteria:
+        behavior: Predator
+        measure: reward
+        min_lesson_length: 300
+        signal_smoothing: true
+        threshold: 0.1
+        require_reset: true
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 9682
+          value: 13
+      name: Insane - 13
+      completion_criteria: null
+checkpoint_settings:
+  run_id: 800k-retry-long-levels
+  initialize_from: null
+  load_model: false
+  resume: false
+  force: false
+  train_model: false
+  inference: false
+debug: false

@@ -1,0 +1,3 @@
+model_checkpoint_path: "VisualPredator-107295.ckpt"
+all_model_checkpoint_paths: "VisualPredator-99943.ckpt"
+all_model_checkpoint_paths: "VisualPredator-107295.ckpt"

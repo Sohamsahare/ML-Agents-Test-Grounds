@@ -1,0 +1,87 @@
+{
+    "speed": {
+        "lesson_num": 3
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "enemies": {
+        "lesson_num": 0
+    },
+    "spawnRange": {
+        "lesson_num": 2
+    },
+    "Shooter": {
+        "checkpoints": [
+            {
+                "steps": 99994,
+                "file_path": "results\\try-2\\Shooter\\Shooter-99994.nn",
+                "reward": 0.6395999863743782,
+                "creation_time": 1603490002.6309905
+            },
+            {
+                "steps": 199940,
+                "file_path": "results\\try-2\\Shooter\\Shooter-199940.nn",
+                "reward": -1.0150000527501106,
+                "creation_time": 1603490871.1073606
+            },
+            {
+                "steps": 299990,
+                "file_path": "results\\try-2\\Shooter\\Shooter-299990.nn",
+                "reward": -0.3780000042170286,
+                "creation_time": 1603491700.4764307
+            },
+            {
+                "steps": 330091,
+                "file_path": "results\\try-2\\Shooter\\Shooter-330091.nn",
+                "reward": null,
+                "creation_time": 1603491956.2241461
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 330091,
+            "file_path": "results\\try-2\\Shooter.nn",
+            "reward": null,
+            "creation_time": 1603491956.2241461
+        }
+    },
+    "Predator": {
+        "checkpoints": [
+            {
+                "steps": 99994,
+                "file_path": "results\\try-2\\Predator\\Predator-99994.nn",
+                "reward": -1.1750000566244125,
+                "creation_time": 1603490008.4763775
+            },
+            {
+                "steps": 199940,
+                "file_path": "results\\try-2\\Predator\\Predator-199940.nn",
+                "reward": -1.0000000484287739,
+                "creation_time": 1603490871.5486922
+            },
+            {
+                "steps": 299990,
+                "file_path": "results\\try-2\\Predator\\Predator-299990.nn",
+                "reward": null,
+                "creation_time": 1603491703.3671336
+            },
+            {
+                "steps": 330091,
+                "file_path": "results\\try-2\\Predator\\Predator-330091.nn",
+                "reward": null,
+                "creation_time": 1603491958.4534388
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 330091,
+            "file_path": "results\\try-2\\Predator.nn",
+            "reward": null,
+            "creation_time": 1603491958.4534388
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

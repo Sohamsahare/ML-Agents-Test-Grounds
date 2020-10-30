@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3567010380157851348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4799732443914232238}
+  - component: {fileID: 5627640458470472182}
+  m_Layer: 0
+  m_Name: PvSArenaManager
+  m_TagString: arenaManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4799732443914232238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567010380157851348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5627640458470472182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567010380157851348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d799470f672e24d88dc197c625fc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSpawnRange: 10
+  defaultEnemyCount: 1
+  ground: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  agent: {fileID: 0}
+  currentScoreTmp: {fileID: 0}
+  prevScoreTmp: {fileID: 0}
+  avgScoreTmp: {fileID: 0}
+  passMaterial: {fileID: 2100000, guid: a980c5e2472c3c04db99e70dec4d8205, type: 2}
+  failMaterial: {fileID: 2100000, guid: 811d9337477a47f4b88672183a7a2190, type: 2}
+  walls:
+  - position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    transform: {fileID: 0}
+    fourWayDirection: 0
+  - position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    transform: {fileID: 0}
+    fourWayDirection: 1
+  - position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    transform: {fileID: 0}
+    fourWayDirection: 2
+  - position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    transform: {fileID: 0}
+    fourWayDirection: 3
+  obstacles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  minObstacleSpawnRange: 3
+  maxObstacleSpawnRange: 10
+  predator: {fileID: 0}
+  shooter: {fileID: 0}
+  enableObstacles: 0
+  winTrackerTmp: {fileID: 0}

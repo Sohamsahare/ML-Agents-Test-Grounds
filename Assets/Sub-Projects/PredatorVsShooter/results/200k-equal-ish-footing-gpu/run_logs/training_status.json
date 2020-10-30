@@ -1,0 +1,123 @@
+{
+    "speed": {
+        "lesson_num": 3
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "enemies": {
+        "lesson_num": 0
+    },
+    "spawnRange": {
+        "lesson_num": 3
+    },
+    "Predator": {
+        "checkpoints": [
+            {
+                "steps": 99952,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Predator\\Predator-99952.nn",
+                "reward": 0.43749999068677425,
+                "creation_time": 1603531007.7428815
+            },
+            {
+                "steps": 199950,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Predator\\Predator-199950.nn",
+                "reward": -1.0770000740885735,
+                "creation_time": 1603531943.0110753
+            },
+            {
+                "steps": 299951,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Predator\\Predator-299951.nn",
+                "reward": 0.44809999093413355,
+                "creation_time": 1603532911.2125852
+            },
+            {
+                "steps": 399964,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Predator\\Predator-399964.nn",
+                "reward": -0.43400001153349876,
+                "creation_time": 1603533871.164875
+            },
+            {
+                "steps": 499975,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Predator\\Predator-499975.nn",
+                "reward": 0.456222222910987,
+                "creation_time": 1603534700.1119187
+            },
+            {
+                "steps": 599993,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Predator\\Predator-599993.nn",
+                "reward": -0.028499990701675415,
+                "creation_time": 1603535587.5225365
+            },
+            {
+                "steps": 688160,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Predator\\Predator-688160.nn",
+                "reward": null,
+                "creation_time": 1603536376.9125326
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 688160,
+            "file_path": "results\\200k-equal-ish-footing-gpu\\Predator.nn",
+            "reward": null,
+            "creation_time": 1603536376.9125326
+        }
+    },
+    "Shooter": {
+        "checkpoints": [
+            {
+                "steps": 99952,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter\\Shooter-99952.nn",
+                "reward": -1.0010000467300415,
+                "creation_time": 1603531015.61567
+            },
+            {
+                "steps": 199950,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter\\Shooter-199950.nn",
+                "reward": 0.47419999688863756,
+                "creation_time": 1603531941.3084435
+            },
+            {
+                "steps": 299951,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter\\Shooter-299951.nn",
+                "reward": -0.8153333357638783,
+                "creation_time": 1603532914.3738291
+            },
+            {
+                "steps": 399964,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter\\Shooter-399964.nn",
+                "reward": -1.1700000241398811,
+                "creation_time": 1603533876.934591
+            },
+            {
+                "steps": 499975,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter\\Shooter-499975.nn",
+                "reward": -0.8362000532448292,
+                "creation_time": 1603534703.3082874
+            },
+            {
+                "steps": 599993,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter\\Shooter-599993.nn",
+                "reward": -0.7717500450089574,
+                "creation_time": 1603535586.828051
+            },
+            {
+                "steps": 688160,
+                "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter\\Shooter-688160.nn",
+                "reward": -1.3580000615782208,
+                "creation_time": 1603536375.4324584
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 688160,
+            "file_path": "results\\200k-equal-ish-footing-gpu\\Shooter.nn",
+            "reward": -1.3580000615782208,
+            "creation_time": 1603536375.4324584
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

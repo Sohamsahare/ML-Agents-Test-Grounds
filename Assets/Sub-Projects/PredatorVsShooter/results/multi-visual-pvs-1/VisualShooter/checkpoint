@@ -1,0 +1,5 @@
+model_checkpoint_path: "VisualShooter-317705.ckpt"
+all_model_checkpoint_paths: "VisualShooter-99981.ckpt"
+all_model_checkpoint_paths: "VisualShooter-199945.ckpt"
+all_model_checkpoint_paths: "VisualShooter-299943.ckpt"
+all_model_checkpoint_paths: "VisualShooter-317705.ckpt"

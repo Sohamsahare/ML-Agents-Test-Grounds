@@ -1,0 +1,87 @@
+{
+    "speed": {
+        "lesson_num": 0
+    },
+    "acceleration": {
+        "lesson_num": 0
+    },
+    "enemies": {
+        "lesson_num": 0
+    },
+    "spawnRange": {
+        "lesson_num": 0
+    },
+    "VisualShooter": {
+        "checkpoints": [
+            {
+                "steps": 99981,
+                "file_path": "results\\multi-visual-pvs-1\\VisualShooter\\VisualShooter-99981.nn",
+                "reward": -30.53500133752823,
+                "creation_time": 1603657448.5625029
+            },
+            {
+                "steps": 199945,
+                "file_path": "results\\multi-visual-pvs-1\\VisualShooter\\VisualShooter-199945.nn",
+                "reward": -30.495001256465912,
+                "creation_time": 1603658713.5409198
+            },
+            {
+                "steps": 299943,
+                "file_path": "results\\multi-visual-pvs-1\\VisualShooter\\VisualShooter-299943.nn",
+                "reward": null,
+                "creation_time": 1603659965.6436753
+            },
+            {
+                "steps": 317705,
+                "file_path": "results\\multi-visual-pvs-1\\VisualShooter\\VisualShooter-317705.nn",
+                "reward": null,
+                "creation_time": 1603660200.8451219
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 317705,
+            "file_path": "results\\multi-visual-pvs-1\\VisualShooter.nn",
+            "reward": null,
+            "creation_time": 1603660200.8451219
+        }
+    },
+    "VisualPredator": {
+        "checkpoints": [
+            {
+                "steps": 99981,
+                "file_path": "results\\multi-visual-pvs-1\\VisualPredator\\VisualPredator-99981.nn",
+                "reward": -10.244999948889017,
+                "creation_time": 1603657448.801863
+            },
+            {
+                "steps": 199945,
+                "file_path": "results\\multi-visual-pvs-1\\VisualPredator\\VisualPredator-199945.nn",
+                "reward": -10.149999968707561,
+                "creation_time": 1603658713.4282224
+            },
+            {
+                "steps": 299943,
+                "file_path": "results\\multi-visual-pvs-1\\VisualPredator\\VisualPredator-299943.nn",
+                "reward": null,
+                "creation_time": 1603659965.440221
+            },
+            {
+                "steps": 317705,
+                "file_path": "results\\multi-visual-pvs-1\\VisualPredator\\VisualPredator-317705.nn",
+                "reward": null,
+                "creation_time": 1603660202.6864822
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 317705,
+            "file_path": "results\\multi-visual-pvs-1\\VisualPredator.nn",
+            "reward": null,
+            "creation_time": 1603660202.6864822
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

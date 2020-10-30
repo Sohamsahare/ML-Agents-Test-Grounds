@@ -29,20 +29,20 @@ public class CustomEnemy : MonoBehaviour
                                     .Instance
                                     .EnvironmentParameters
                                     .GetWithDefault("speed", defaultParameter);
-            if (navMeshAgent.speed != og)
-            {
-                Debug.Log("Speed Changed to -> " + navMeshAgent.speed + " from " + og);
-            }
+            // if (navMeshAgent.speed != og)
+            // {
+            //     Debug.Log("Speed Changed to -> " + navMeshAgent.speed + " from " + og);
+            // }
 
             og = navMeshAgent.acceleration;
             navMeshAgent.acceleration = Academy
                                     .Instance
                                     .EnvironmentParameters
                                     .GetWithDefault("acceleration", defaultParameter);
-            if (navMeshAgent.acceleration != og)
-            {
-                Debug.Log("Acceleration Changed to -> " + navMeshAgent.acceleration + " from " + og);
-            }
+            // if (navMeshAgent.acceleration != og)
+            // {
+            //     Debug.Log("Acceleration Changed to -> " + navMeshAgent.acceleration + " from " + og);
+            // }
         }
     }
 }

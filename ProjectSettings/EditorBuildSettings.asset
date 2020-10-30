@@ -11,7 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Sub-Projects/Shooter/Scenes/StaticShooter.unity
     guid: e1b0c1be661fafb448a79287d0df0756
-  - enabled: 1
-    path: Assets/Sub-Projects/Predator/Scenes/Chaser.unity
+  - enabled: 0
+    path: Assets/Sub-Projects/Predator/Scenes/Predator.unity
     guid: 295402484a108de43a0d8a39b3dbcd47
+  - enabled: 0
+    path: Assets/Sub-Projects/PredatorVsShooter/Scenes/PredatorVsShooter.unity
+    guid: fd5ebde0907164c4eb27d27b6f658deb
+  - enabled: 0
+    path: Assets/Sub-Projects/PredatorVsShooter/Scenes/VisualPvsS.unity
+    guid: f4af5585e7358b14698c27c50e8a4a5d
+  - enabled: 1
+    path: Assets/Sub-Projects/PredatorVsShooter/Scenes/PvSSeparate.unity
+    guid: dd669af019c7cec4598aa86bc6ae05f8
   m_configObjects: {}

@@ -12,6 +12,9 @@ TagManager:
   - obstacle
   - bullet
   - arenaManager
+  - predator
+  - prey
+  - shooter
   layers:
   - Default
   - TransparentFX

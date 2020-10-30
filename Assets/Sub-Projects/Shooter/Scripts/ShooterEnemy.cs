@@ -10,38 +10,50 @@ public class ShooterEnemy : MonoBehaviour
     private float defaultParameter = .95f;
     [HideInInspector]
     public ShooterAgent agent = null;
+    public bool disableEnemy = false;
     private NavMeshAgent navMeshAgent;
 
     private void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        if (!disableEnemy)
+        {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
     }
 
     private void OnEnable()
     {
-        float og = navMeshAgent.speed;
-        navMeshAgent.speed = Academy
-                                .Instance
-                                .EnvironmentParameters
-                                .GetWithDefault("speed", defaultParameter);
-        if (navMeshAgent.speed != og)
+        if (!disableEnemy)
         {
-            Debug.Log("Speed Changed to -> " + navMeshAgent.speed + " from " + og);
-        }
 
-        og = navMeshAgent.acceleration;
-        navMeshAgent.acceleration = Academy
-                                .Instance
-                                .EnvironmentParameters
-                                .GetWithDefault("acceleration", defaultParameter);
-        if (navMeshAgent.acceleration != og)
-        {
-            Debug.Log("Acceleration Changed to -> " + navMeshAgent.acceleration + " from " + og);
+            float og = navMeshAgent.speed;
+            navMeshAgent.speed = Academy
+                                    .Instance
+                                    .EnvironmentParameters
+                                    .GetWithDefault("speed", defaultParameter);
+            // if (navMeshAgent.speed != og)
+            // {
+            //     Debug.Log("Speed Changed to -> " + navMeshAgent.speed + " from " + og);
+            // }
+
+            og = navMeshAgent.acceleration;
+            navMeshAgent.acceleration = Academy
+                                    .Instance
+                                    .EnvironmentParameters
+                                    .GetWithDefault("acceleration", defaultParameter);
+            // if (navMeshAgent.acceleration != og)
+            // {
+            //     Debug.Log("Acceleration Changed to -> " + navMeshAgent.acceleration + " from " + og);
+            // }
         }
     }
 
-    private void FixedUpdate() {
-        navMeshAgent.SetDestination(agent.transform.position);
+    private void FixedUpdate()
+    {
+        if (!disableEnemy)
+        {
+            navMeshAgent.SetDestination(agent.transform.position);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,10 +65,6 @@ public class ShooterEnemy : MonoBehaviour
         else if (other.transform.CompareTag("agent"))
         {
             agent.DamageAgent(gameObject);
-        }
-        else if (other.transform.CompareTag("obstacle"))
-        {
-            agent.RespawnEnemy(gameObject);
         }
     }
 }

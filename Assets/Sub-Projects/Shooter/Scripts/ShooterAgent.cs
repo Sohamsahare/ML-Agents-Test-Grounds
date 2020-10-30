@@ -9,15 +9,6 @@ using Random = UnityEngine.Random;
 
 public class ShooterAgent : Agent
 {
-    [Serializable]
-    public enum EnemyMovementType
-    {
-        Static,
-        Dynamic,
-        Miscelleanous,
-    }
-
-    public EnemyMovementType enemyMovementType;
     public Gun gun;
     public GameObject ground;
     public GameObject enemyPrefab;
@@ -27,16 +18,18 @@ public class ShooterAgent : Agent
     public float rotationSpeed = 150f;
     public float movementSpeed = 1f;
     public float defaultSpawnRange = 4f;
+    public bool enableObstacles = false;
     public Material passMaterial;
     public Material failMaterial;
+    public ArenaManager arenaManager;
+    public float enemyCount = 5;
+    float spawnRange;
     float averageScore = 0;
     float currentScore = 0;
     List<GameObject> enemies;
     Material originalMaterial;
     Renderer groundRenderer;
     Rigidbody rb;
-    float enemyCount;
-    float spawnRange;
     public override void Initialize()
     {
         rb = GetComponent<Rigidbody>();
@@ -51,11 +44,10 @@ public class ShooterAgent : Agent
     }
     public override void OnEpisodeBegin()
     {
-        // get spawn range 
-        spawnRange = Academy
-                        .Instance
-                        .EnvironmentParameters
-                        .GetWithDefault("spawnRange", defaultSpawnRange);
+        arenaManager.ReadParameters();
+        arenaManager.MoveWalls();
+        arenaManager.PlaceObstacles(enableObstacles);
+
         // get total enemy count
         enemyCount = Academy
                         .Instance
@@ -83,6 +75,11 @@ public class ShooterAgent : Agent
         transform.position =
             ground.transform.position +
             new Vector3(agentPos.x, 1f, agentPos.y);
+        Vector3 rotation = Vector3.zero;
+        rotation.y = Random.Range(0, 180f);
+        transform.eulerAngles = rotation;
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
 
         foreach (GameObject enemy in enemies)
         {
@@ -115,9 +112,10 @@ public class ShooterAgent : Agent
         }
 
         // using gun's muzzle to get position
-        Vector3 closestEnemyDirection = gun.muzzleTransform.position - closestEnemyPosition;
+        Vector3 closestEnemyDirection = transform.position - closestEnemyPosition;
         closestEnemyDirection = closestEnemyDirection.normalized;
         // direction vector for closest enemy
+        Debug.DrawRay(transform.position, closestEnemyDirection, Color.black, .1f);
         sensor.AddObservation(closestEnemyDirection);
         // normalized distance from closest enemy
         float distObs = distance == float.PositiveInfinity ? 0 : distance / spawnRange;
@@ -165,7 +163,7 @@ public class ShooterAgent : Agent
                 // shoot
                 gun.Fire();
                 // discourage agent to spam fire button
-                AddReward(-0.005f);
+                AddReward(-0.01f);
                 break;
             default:
                 Debug.LogWarning("Invalid input -> " + vectorAction[0]);
@@ -304,11 +302,6 @@ public class ShooterAgent : Agent
     {
         if (other.gameObject.CompareTag("obstacle"))
         {
-            // reset agent position
-            Vector2 agentPos = RandomPositionInSpawnCircle();
-            transform.position =
-                ground.transform.position +
-                new Vector3(agentPos.x, 1f, agentPos.y);
             AddReward(-0.01f);
         }
         else if (other.gameObject.CompareTag("wall"))

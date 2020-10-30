@@ -1,0 +1,8 @@
+model_checkpoint_path: "Shooter-688160.ckpt"
+all_model_checkpoint_paths: "Shooter-99952.ckpt"
+all_model_checkpoint_paths: "Shooter-199950.ckpt"
+all_model_checkpoint_paths: "Shooter-299951.ckpt"
+all_model_checkpoint_paths: "Shooter-399964.ckpt"
+all_model_checkpoint_paths: "Shooter-499975.ckpt"
+all_model_checkpoint_paths: "Shooter-599993.ckpt"
+all_model_checkpoint_paths: "Shooter-688160.ckpt"

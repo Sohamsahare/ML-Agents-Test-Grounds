@@ -8,7 +8,7 @@ public class CustomAgent : Agent
     public float maxPositiveReward = 1;
     public float maxNegativeReward = -1;
     public bool enableObstacles = false;
-    public float currentScore { get; private set; }
+    public float currentScore { get; protected set; }
     public ArenaManager arenaManager;
     protected Rigidbody rb;
     protected StatsRecorder stats;
@@ -80,14 +80,19 @@ public class CustomAgent : Agent
         PreAgentRewarded();
         // positive reward for achieving goal
         AddReward(maxPositiveReward);
-        currentScore = Utilities.RoundTo(GetCumulativeReward(), 2);
-        arenaManager.SetScore(currentScore);
+        HandleScore();
         PostAgentRewarded();
         if (arenaManager.IsEpisodeEnded(enemy, true))
         {
             PreEpisodeEnded();
             EndEpisode();
         }
+    }
+
+    protected virtual void HandleScore()
+    {
+        currentScore = Utilities.RoundTo(GetCumulativeReward(), 2);
+        arenaManager.SetScore(currentScore);
     }
 
     protected virtual void PreAgentRewarded() { }
@@ -98,8 +103,7 @@ public class CustomAgent : Agent
         PreAgentPunished();
         // negative reward for being attacked
         AddReward(maxNegativeReward);
-        currentScore = Utilities.RoundTo(GetCumulativeReward(), 2);
-        arenaManager.SetScore(currentScore);
+        HandleScore();
         PostAgentPunished();
 
         if (arenaManager.IsEpisodeEnded(enemy, false))
@@ -115,7 +119,6 @@ public class CustomAgent : Agent
     protected virtual void PreEpisodeEnded() { }
     protected virtual void FixedUpdate()
     {
-        currentScore = Utilities.RoundTo(GetCumulativeReward(), 2);
-        arenaManager.SetScore(currentScore);
+        HandleScore();
     }
 }
